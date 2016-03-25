@@ -14,12 +14,12 @@ namespace WCFServiceHost
     {
         static void Main(string[] args)
         {
-            Uri baseAddress = new Uri("http://localhost:10002/BaseName/");
-            ServiceHost host = new ServiceHost(typeof(CalculatorService), baseAddress);
+            Uri baseAddress = new Uri("http://localhost:10007/RSI-WCF/");
+            ServiceHost host = new ServiceHost(typeof(DataService), baseAddress);
 
             try
             {
-                host.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+                host.AddServiceEndpoint(typeof(IData), new WSHttpBinding(), "DataService");
                 ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
                 smb.HttpGetEnabled = true;
                 host.Description.Behaviors.Add(smb);

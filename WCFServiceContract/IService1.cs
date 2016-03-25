@@ -7,8 +7,9 @@ using System.Text;
 
 namespace WCFServiceContract
 {
+
     [ServiceContract]
-    public interface ICalculator
+    public interface IData
     {
         [OperationContract]
         double Add(double n1, double n2);
@@ -18,6 +19,10 @@ namespace WCFServiceContract
         double Multiply(double n1, double n2);
         [OperationContract]
         double Divide(double n1, double n2);
+        [OperationContract]
+        string Concat(string a, string b);
+        [OperationContract]
+        string Shuffle(string a, string b);
     }
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
