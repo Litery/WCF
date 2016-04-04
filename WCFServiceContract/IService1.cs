@@ -7,7 +7,16 @@ using System.Text;
 
 namespace WCFServiceContract
 {
-
+    [ServiceContract]
+    public interface IData2
+    {
+        [OperationContract]
+        int Fibonacci(int number);
+        [OperationContract]
+        string ToUpperCase(string a);
+        [OperationContract]
+        int GetNumberOfSelectedLetter(string a, char b);
+    }
     [ServiceContract]
     public interface IData
     {
