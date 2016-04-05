@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceClient", "WCFServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceHost", "WCFServiceHost\WCFServiceHost.csproj", "{AB48DCC7-F2BA-48AC-9E45-22253B90F5F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication_GUI", "WindowsFormsApplication_GUI\WindowsFormsApplication_GUI.csproj", "{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication", "WindowsFormsApplication_GUI\WindowsFormsApplication.csproj", "{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
