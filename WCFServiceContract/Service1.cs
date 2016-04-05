@@ -7,31 +7,57 @@ using System.Text;
 
 namespace WCFServiceContract
 {
-    public class DataService2 : IData2
+    public class DataService : IData
     {
-        public int Fibonacci(int number)
+        public double Add(double n1, double n2)
         {
-            if (number == 1 || number == 2)
-            {
-                return 1;
-            }
-            int fibo1 = 1, fibo2 = 1, fibonacci = 1;
-            for (int i = 3; i <= number; i++)
-            {
-                fibonacci = fibo1 + fibo2; //Fibonacci number is sum of previous two Fibonacci number
-                fibo1 = fibo2;
-                fibo2 = fibonacci;
-
-            }
-            return fibonacci; //Fibonacci number
+            double result = n1 + n2;
+            return result;
+        }
+        public double Subtract(double n1, double n2)
+        {
+            double result = n1 - n2;
+            return result;
+        }
+        public double Multiply(double n1, double n2)
+        {
+            double result = n1 * n2;
+            return result;
+        }
+        public double Divide(double n1, double n2)
+        {
+            double result = n1 / n2;
+            return result;
+        }
+        public string Concat(string a, string b)
+        {
+            string result = a + b;
+            return result;
         }
 
+        public string Shuffle(string a, string b)
+        {
+            string word = a + b;
+            Random num = new Random();
+            string result = new string(word.ToCharArray().OrderBy(s => (num.Next(2) % 2) == 0).ToArray());
+            return result;
+
+        }
+    }
+
+    public class DataService2 : IData2
+    {
         public string ToUpperCase(string a)
         {
             return a.ToUpper();
         }
 
-        public int GetNumberOfSelectedLetter(string a, char b)
+        public string ToLowerCase(string a)
+        {
+            return a.ToLower();
+        }
+
+        public int LetterCount(string a, char b)
         {
             int result = 0;
             foreach (char x in a)
@@ -41,69 +67,32 @@ namespace WCFServiceContract
             }
             return result;
         }
-    }
-    public class DataService : IData
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine(n1 + " + " + n2 + " = " + result);
-            return result;
-        }
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine(n1 + " - " + n2 + " = " + result);
-            return result;
-        }
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine(n1 + " * " + n2 + " = " + result);
-            return result;
-        }
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine(n1 + " / " + n2 + " = " + result);
-            return result;
-        }
-        public string Concat(string a, string b)
-        {
-            string result = a + b;
-            Console.WriteLine("Concat(" + a + ", " + b + ") = " + result);
-            return result;
-        }
 
-        public string Shuffle(string a, string b)
+        public int Fibonacci(int number)
         {
-            string word = a + b;
-            Random num = new Random();
-            string result = new string(word.ToCharArray().OrderBy(s => (num.Next(2) % 2) == 0).ToArray());
-            Console.WriteLine("Shuffle(" + a + ", " + b + ") = " + result);
-            return result;
-
-        }
-    }
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class Service1 : IService1
-    {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
+            if (number == 1 || number == 2)
             {
-                throw new ArgumentNullException("composite");
+                return 1;
             }
-            if (composite.BoolValue)
+            int n1 = 1, n2 = 1, fib = 1;
+            for (int i = 3; i <= number; i++)
             {
-                composite.StringValue += "Suffix";
+                fib = n1 + n2;
+                n1 = n2;
+                n2 = fib;
+
             }
-            return composite;
+            return fib;
+        }
+
+        public int Factorial(int number)
+        {
+            int result = number;
+            for (int i = 1; i < number; i++)
+            {
+                result = result * i;
+            }
+            return result;
         }
     }
 }

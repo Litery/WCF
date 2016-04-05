@@ -10,12 +10,16 @@ namespace WCFServiceContract
     [ServiceContract]
     public interface IData2
     {
-        [OperationContract]
-        int Fibonacci(int number);
+        
         [OperationContract]
         string ToUpperCase(string a);
         [OperationContract]
-        int GetNumberOfSelectedLetter(string a, char b);
+        string ToLowerCase(string a);
+        [OperationContract]
+        int LetterCount(string a, char b);
+        [OperationContract]
+        int Fibonacci(int number);
+
     }
     [ServiceContract]
     public interface IData
@@ -32,43 +36,6 @@ namespace WCFServiceContract
         string Concat(string a, string b);
         [OperationContract]
         string Shuffle(string a, string b);
-    }
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
-    [ServiceContract]
-    public interface IService1
-    {
-        [OperationContract]
-        string GetData(int value);
-
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        // TODO: Add your service operations here
-    }
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "WCFServiceContract.ContractType".
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set
-            {
-                boolValue = value;
-            }
-        }
-            [DataMember]
-            public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
     }
 }
 

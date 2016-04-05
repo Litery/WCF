@@ -29,131 +29,132 @@
         private void InitializeComponent()
         {
             this.MethodComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.serviceComboBox = new System.Windows.Forms.ComboBox();
-            this.ParamTextBox1 = new System.Windows.Forms.TextBox();
-            this.ParamTextBox2 = new System.Windows.Forms.TextBox();
-            this.ExecuteButton = new System.Windows.Forms.Button();
-            this.Result = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.FunctionLabel = new System.Windows.Forms.Label();
+            this.ServiceLabel = new System.Windows.Forms.Label();
+            this.ServiceComboBox = new System.Windows.Forms.ComboBox();
+            this.FirstArgumentTextBox = new System.Windows.Forms.TextBox();
+            this.SecondArgumentTextBox = new System.Windows.Forms.TextBox();
+            this.RunButton = new System.Windows.Forms.Button();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.FirstArgumentLabel = new System.Windows.Forms.Label();
+            this.SecondArgumentLabel = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MethodComboBox
             // 
             this.MethodComboBox.FormattingEnabled = true;
-            this.MethodComboBox.Location = new System.Drawing.Point(137, 46);
+            this.MethodComboBox.Location = new System.Drawing.Point(218, 25);
             this.MethodComboBox.Name = "MethodComboBox";
-            this.MethodComboBox.Size = new System.Drawing.Size(121, 21);
+            this.MethodComboBox.Size = new System.Drawing.Size(168, 21);
             this.MethodComboBox.TabIndex = 0;
-            this.MethodComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.MethodComboBox.SelectedIndexChanged += new System.EventHandler(this.FunctionComboBox_SelectedIndexChanged);
             // 
-            // label1
+            // FunctionLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Metoda\r\n";
+            this.FunctionLabel.AutoSize = true;
+            this.FunctionLabel.Location = new System.Drawing.Point(215, 9);
+            this.FunctionLabel.Name = "FunctionLabel";
+            this.FunctionLabel.Size = new System.Drawing.Size(48, 13);
+            this.FunctionLabel.TabIndex = 1;
+            this.FunctionLabel.Text = "Function";
             // 
-            // label2
+            // ServiceLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Usluga";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.ServiceLabel.AutoSize = true;
+            this.ServiceLabel.Location = new System.Drawing.Point(25, 9);
+            this.ServiceLabel.Name = "ServiceLabel";
+            this.ServiceLabel.Size = new System.Drawing.Size(43, 13);
+            this.ServiceLabel.TabIndex = 2;
+            this.ServiceLabel.Text = "Service";
             // 
-            // serviceComboBox
+            // ServiceComboBox
             // 
-            this.serviceComboBox.FormattingEnabled = true;
-            this.serviceComboBox.Items.AddRange(new object[] {
-            "Usluga 1",
-            "Usluga 2"});
-            this.serviceComboBox.Location = new System.Drawing.Point(137, 6);
-            this.serviceComboBox.Name = "serviceComboBox";
-            this.serviceComboBox.Size = new System.Drawing.Size(121, 21);
-            this.serviceComboBox.TabIndex = 3;
-            this.serviceComboBox.SelectedIndexChanged += new System.EventHandler(this.serviceComboBox_SelectedIndexChanged);
+            this.ServiceComboBox.FormattingEnabled = true;
+            this.ServiceComboBox.Items.AddRange(new object[] {
+            "Primary",
+            "Secondary"});
+            this.ServiceComboBox.Location = new System.Drawing.Point(28, 25);
+            this.ServiceComboBox.Name = "ServiceComboBox";
+            this.ServiceComboBox.Size = new System.Drawing.Size(168, 21);
+            this.ServiceComboBox.TabIndex = 3;
+            this.ServiceComboBox.SelectedIndexChanged += new System.EventHandler(this.ServiceComboBox_SelectedIndexChanged);
             // 
-            // ParamTextBox1
+            // FirstArgumentTextBox
             // 
-            this.ParamTextBox1.Location = new System.Drawing.Point(28, 107);
-            this.ParamTextBox1.Name = "ParamTextBox1";
-            this.ParamTextBox1.Size = new System.Drawing.Size(230, 20);
-            this.ParamTextBox1.TabIndex = 4;
+            this.FirstArgumentTextBox.Location = new System.Drawing.Point(28, 107);
+            this.FirstArgumentTextBox.Name = "FirstArgumentTextBox";
+            this.FirstArgumentTextBox.Size = new System.Drawing.Size(358, 20);
+            this.FirstArgumentTextBox.TabIndex = 4;
             // 
-            // ParamTextBox2
+            // SecondArgumentTextBox
             // 
-            this.ParamTextBox2.Location = new System.Drawing.Point(28, 160);
-            this.ParamTextBox2.Name = "ParamTextBox2";
-            this.ParamTextBox2.Size = new System.Drawing.Size(230, 20);
-            this.ParamTextBox2.TabIndex = 5;
+            this.SecondArgumentTextBox.Location = new System.Drawing.Point(28, 160);
+            this.SecondArgumentTextBox.Name = "SecondArgumentTextBox";
+            this.SecondArgumentTextBox.Size = new System.Drawing.Size(358, 20);
+            this.SecondArgumentTextBox.TabIndex = 5;
             // 
-            // ExecuteButton
+            // RunButton
             // 
-            this.ExecuteButton.Location = new System.Drawing.Point(104, 226);
-            this.ExecuteButton.Name = "ExecuteButton";
-            this.ExecuteButton.Size = new System.Drawing.Size(75, 23);
-            this.ExecuteButton.TabIndex = 6;
-            this.ExecuteButton.Text = "Wykonaj";
-            this.ExecuteButton.UseVisualStyleBackColor = true;
-            this.ExecuteButton.Click += new System.EventHandler(this.button1_Click);
+            this.RunButton.Location = new System.Drawing.Point(28, 272);
+            this.RunButton.Name = "RunButton";
+            this.RunButton.Size = new System.Drawing.Size(358, 50);
+            this.RunButton.TabIndex = 6;
+            this.RunButton.Text = "Run";
+            this.RunButton.UseVisualStyleBackColor = true;
+            this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
             // 
-            // Result
+            // ResultTextBox
             // 
-            this.Result.Location = new System.Drawing.Point(158, 200);
-            this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(100, 20);
-            this.Result.TabIndex = 7;
+            this.ResultTextBox.Location = new System.Drawing.Point(28, 223);
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.ReadOnly = true;
+            this.ResultTextBox.Size = new System.Drawing.Size(358, 20);
+            this.ResultTextBox.TabIndex = 7;
             // 
-            // label3
+            // FirstArgumentLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "parametr 1";
+            this.FirstArgumentLabel.AutoSize = true;
+            this.FirstArgumentLabel.Location = new System.Drawing.Point(25, 91);
+            this.FirstArgumentLabel.Name = "FirstArgumentLabel";
+            this.FirstArgumentLabel.Size = new System.Drawing.Size(104, 13);
+            this.FirstArgumentLabel.TabIndex = 8;
+            this.FirstArgumentLabel.Text = "Function argument 1";
             // 
-            // label4
+            // SecondArgumentLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "parametr 2";
+            this.SecondArgumentLabel.AutoSize = true;
+            this.SecondArgumentLabel.Location = new System.Drawing.Point(25, 144);
+            this.SecondArgumentLabel.Name = "SecondArgumentLabel";
+            this.SecondArgumentLabel.Size = new System.Drawing.Size(104, 13);
+            this.SecondArgumentLabel.TabIndex = 9;
+            this.SecondArgumentLabel.Text = "Function argument 2";
             // 
-            // label5
+            // ResultLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "wynik";
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(25, 207);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(37, 13);
+            this.ResultLabel.TabIndex = 10;
+            this.ResultLabel.Text = "Result";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Result);
-            this.Controls.Add(this.ExecuteButton);
-            this.Controls.Add(this.ParamTextBox2);
-            this.Controls.Add(this.ParamTextBox1);
-            this.Controls.Add(this.serviceComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(417, 340);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.SecondArgumentLabel);
+            this.Controls.Add(this.FirstArgumentLabel);
+            this.Controls.Add(this.ResultTextBox);
+            this.Controls.Add(this.RunButton);
+            this.Controls.Add(this.SecondArgumentTextBox);
+            this.Controls.Add(this.FirstArgumentTextBox);
+            this.Controls.Add(this.ServiceComboBox);
+            this.Controls.Add(this.ServiceLabel);
+            this.Controls.Add(this.FunctionLabel);
             this.Controls.Add(this.MethodComboBox);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -165,16 +166,16 @@
         #endregion
 
         private System.Windows.Forms.ComboBox MethodComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox serviceComboBox;
-        private System.Windows.Forms.TextBox ParamTextBox1;
-        private System.Windows.Forms.TextBox ParamTextBox2;
-        private System.Windows.Forms.Button ExecuteButton;
-        private System.Windows.Forms.TextBox Result;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label FunctionLabel;
+        private System.Windows.Forms.Label ServiceLabel;
+        private System.Windows.Forms.ComboBox ServiceComboBox;
+        private System.Windows.Forms.TextBox FirstArgumentTextBox;
+        private System.Windows.Forms.TextBox SecondArgumentTextBox;
+        private System.Windows.Forms.Button RunButton;
+        private System.Windows.Forms.TextBox ResultTextBox;
+        private System.Windows.Forms.Label FirstArgumentLabel;
+        private System.Windows.Forms.Label SecondArgumentLabel;
+        private System.Windows.Forms.Label ResultLabel;
     }
 }
 
