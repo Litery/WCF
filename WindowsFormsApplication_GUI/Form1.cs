@@ -22,7 +22,7 @@ namespace WindowsFormsApplication_GUI
         private string[] methods2
         {
             set { }
-            get { return new string[] { "metoda2", "metoda2", "metoda2" }; }
+            get { return new string[] { "Dodawanie", "Odejmowanie", "Mnożenie", "Dzielenie", "Konkatenacja", "Mieszanie" }; }
         }
 
         public Form1()
@@ -67,6 +67,49 @@ namespace WindowsFormsApplication_GUI
                     }
                 }
             }
+            else if (serviceComboBox.SelectedItem.Equals("Usluga 2"))
+            {
+                DataService service = new DataService();
+                switch (MethodComboBox.Text)
+                {
+                    case "Dodawanie":
+                        {
+                            double result = service.Add(Double.Parse(ParamTextBox1.Text), Double.Parse(ParamTextBox2.Text));
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                    case "Odejmowanie":
+                        {
+                            double result = service.Subtract(Double.Parse(ParamTextBox1.Text), Double.Parse(ParamTextBox2.Text));
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                    case "Mnożenie":
+                        {
+                            double result = service.Multiply(Double.Parse(ParamTextBox1.Text), Double.Parse(ParamTextBox2.Text));
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                    case "Dzielenie":
+                        {
+                            double result = service.Divide(Double.Parse(ParamTextBox1.Text), Double.Parse(ParamTextBox2.Text));
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                    case "Konkatenacja":
+                        {
+                            string result = service.Concat(ParamTextBox1.Text, ParamTextBox2.Text);
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                    case "Mieszanie":
+                        {
+                            string result = service.Shuffle(ParamTextBox1.Text, ParamTextBox2.Text);
+                            Result.Text = result.ToString();
+                            break;
+                        }
+                }
+            }
         }
 
         private void serviceComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,7 +117,7 @@ namespace WindowsFormsApplication_GUI
             MethodComboBox.Items.Clear();
             if (serviceComboBox.SelectedItem.Equals("Usluga 1"))
                 MethodComboBox.Items.AddRange(methods1);
-            else
+            else if (serviceComboBox.SelectedItem.Equals("Usluga 2"))
                 MethodComboBox.Items.AddRange(methods2);
         }
     }
