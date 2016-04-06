@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,10 +82,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WCFServiceContract2\WCFServiceContract2.csproj">
+      <Project>{ad0c5e00-40cd-4a82-8938-9e6fea8c210f}</Project>
+      <Name>WCFServiceContract2</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WCFServiceContract\WCFServiceContract.csproj">
       <Project>{c71b9c49-67bb-455d-adb7-e237e10e853b}</Project>
       <Name>WCFServiceContract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

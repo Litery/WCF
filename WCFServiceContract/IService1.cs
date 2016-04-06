@@ -8,20 +8,6 @@ using System.Text;
 namespace WCFServiceContract
 {
     [ServiceContract]
-    public interface IData2
-    {
-        
-        [OperationContract]
-        string ToUpperCase(string a);
-        [OperationContract]
-        string ToLowerCase(string a);
-        [OperationContract]
-        int LetterCount(string a, char b);
-        [OperationContract]
-        int Fibonacci(int number);
-
-    }
-    [ServiceContract]
     public interface IData
     {
         [OperationContract]

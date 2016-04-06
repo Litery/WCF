@@ -43,6 +43,7 @@
             // 
             // MethodComboBox
             // 
+            this.MethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MethodComboBox.FormattingEnabled = true;
             this.MethodComboBox.Location = new System.Drawing.Point(218, 25);
             this.MethodComboBox.Name = "MethodComboBox";
@@ -70,6 +71,7 @@
             // 
             // ServiceComboBox
             // 
+            this.ServiceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ServiceComboBox.FormattingEnabled = true;
             this.ServiceComboBox.Items.AddRange(new object[] {
             "Primary",

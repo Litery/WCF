@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceHost", "WCFServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication", "WindowsFormsApplication_GUI\WindowsFormsApplication.csproj", "{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceHost2", "WCFServiceHost2\WCFServiceHost2.csproj", "{20C90B41-F2A4-4D10-8FC0-393064B6A347}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceContract2", "WCFServiceContract2\WCFServiceContract2.csproj", "{AD0C5E00-40CD-4A82-8938-9E6FEA8C210F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837E3DA7-D7CC-4912-ACF7-A57E39AB3321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C90B41-F2A4-4D10-8FC0-393064B6A347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C90B41-F2A4-4D10-8FC0-393064B6A347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C90B41-F2A4-4D10-8FC0-393064B6A347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C90B41-F2A4-4D10-8FC0-393064B6A347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0C5E00-40CD-4A82-8938-9E6FEA8C210F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0C5E00-40CD-4A82-8938-9E6FEA8C210F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0C5E00-40CD-4A82-8938-9E6FEA8C210F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0C5E00-40CD-4A82-8938-9E6FEA8C210F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
 
-using WCFServiceContract;
+using WCFServiceContract2;
 
-namespace WCFServiceHost
+namespace WCFServiceHost2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Uri baseAddress = new Uri("http://localhost:10007/RSI-WCF/");
-            ServiceHost host = new ServiceHost(typeof(DataService), baseAddress);
+            Uri baseAddress = new Uri("http://localhost:10008/RSI-WCF2/");
+            ServiceHost host = new ServiceHost(typeof(DataService2), baseAddress);
 
             try
             {
-                host.AddServiceEndpoint(typeof(IData), new WSHttpBinding(), "DataService");
+                host.AddServiceEndpoint(typeof(IData2), new WSHttpBinding(), "DataService2");
                 ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
                 smb.HttpGetEnabled = true;
                 host.Description.Behaviors.Add(smb);
 
                 host.Open();
-                Console.WriteLine("Service is running.");
+                Console.WriteLine("Service2 is running.");
                 Console.WriteLine("Press <ENTER> to quit.");
                 Console.WriteLine();
                 Console.ReadLine();
